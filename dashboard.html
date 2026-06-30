@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | FocusFlow</title>
+
+    <!-- FIXED: removed css/ -->
+    <link rel="stylesheet" href="dashboard.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= SIDEBAR ================= -->
+
+<div class="sidebar">
+
+    <div class="logo">
+
+        <i class="fa-solid fa-layer-group"></i>
+        <h2>FocusFlow</h2>
+
+    </div>
+
+    <ul>
+
+        <li class="active">
+            <i class="fa-solid fa-house"></i>
+            Dashboard
+        </li>
+
+        <li>
+            <i class="fa-solid fa-clock"></i>
+            Pomodoro
+        </li>
+
+        <li>
+            <i class="fa-solid fa-list-check"></i>
+            Tasks
+        </li>
+
+        <li>
+            <i class="fa-solid fa-chart-line"></i>
+            Statistics
+        </li>
+
+    </ul>
+
+    <button id="logoutBtn">Logout</button>
+
+</div>
+
+<!-- ================= MAIN ================= -->
+
+<div class="main">
+
+    <div class="topbar">
+
+        <h1>
+            Welcome,
+            <span id="username">Student</span> 👋
+        </h1>
+
+        <div class="theme">🌙</div>
+
+    </div>
+
+    <div class="stats">
+
+        <div class="card">
+            <h3>Focus Sessions</h3>
+            <h1 id="sessionCount">0</h1>
+        </div>
+
+        <div class="card">
+            <h3>Completed Tasks</h3>
+            <h1 id="completedTasks">0</h1>
+        </div>
+
+        <div class="card">
+            <h3>Pending Tasks</h3>
+            <h1 id="pendingTasks">0</h1>
+        </div>
+
+    </div>
+
+    <div class="content">
+
+        <!-- TIMER -->
+        <div class="timer-section">
+
+            <h2>Pomodoro Timer</h2>
+
+            <div id="timer">25:00</div>
+
+            <div class="buttons">
+
+                <button id="startBtn">Start</button>
+                <button id="pauseBtn">Pause</button>
+                <button id="resetBtn">Reset</button>
+
+            </div>
+
+        </div>
+
+        <!-- TODO -->
+        <div class="todo-section">
+
+            <h2>Today's Tasks</h2>
+
+            <div class="add-task">
+
+                <input type="text" id="taskInput" placeholder="Enter a task">
+
+                <button id="addTask">Add</button>
+
+            </div>
+
+            <ul id="taskList"></ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- FIXED: removed js/ -->
+<script src="storage.js"></script>
+<script src="timer.js"></script>
+<script src="todo.js"></script>
+<script src="dashboard.js"></script>
+
+</body>
+
+</html>
